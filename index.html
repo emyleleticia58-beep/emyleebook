@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio Interativo - Emyle</title>
+    <link rel="stylesheet" href="emy.css">
+</head>
+<body>
+
+<!-- ======== Toggle Tema ======= -->
+<button id="toggle-theme" aria-label="Alterar tema">🌙</button>
+
+<!-- ======== NAVBAR ======== -->
+<header>
+    <nav>
+        <ul>
+            <li><a href="#home">Início</a></li>
+            <li><a href="#sobre">Sobre</a></li>
+            <li><a href="#conteudo">Conteúdo</a></li>
+            <li><a href="#galeria">Galeria</a></li>
+            <li><a href="#contato">Contato</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- ======== HOME ======== -->
+<section id="home" class="section">
+    <h1>Bem-vindo ao meu Portfólio Interativo</h1>
+    <p>Uma página roxa, moderna, centralizada e cheia de interações.</p>
+    <button class="btn" onclick="scrollSmooth('#sobre')">Começar</button>
+</section>
+
+<!-- ======== SOBRE ======== -->
+<section id="sobre" class="section">
+    <h2>Sobre Mim</h2>
+    <p>Olá! Sou <strong>Emyle Letícia</strong>, estudante de Análise e Desenvolvimento de Sistemas.  
+    Este é meu mini e-book multimídia + portfólio.</p>
+</section>
+
+<!-- ======== CONTEÚDO PRINCIPAL ======== -->
+<section id="conteudo" class="section">
+    <h2>Conteúdo Principal</h2>
+    <p>Aqui estão minhas seções principais:</p>
+
+    <div class="cards">
+        <div class="card">
+            <h3>Habilidades</h3>
+            <p>HTML, CSS, UX.</p>
+            <button onclick="addFavorite('Habilidades')">Favoritar</button>
+        </div>
+
+        <div class="card">
+            <h3>Projetos</h3>
+            <p>Meus trabalhos e exercícios do curso.</p>
+            <button onclick="addFavorite('Projetos')">Favoritar</button>
+        </div>
+
+        <div class="card">
+            <h3>Objetivos</h3>
+            <p>Me tornar uma desenvolvedora completa.</p>
+            <button onclick="addFavorite('Objetivos')">Favoritar </button>
+        </div>
+
+        <div class="card">
+            <h3>Experiências</h3>
+            <p>No momento não tenho experiências relevantes.</p>
+            <button onclick="addFavorite('Experiências')">Favoritar</button>
+        </div>
+
+        <div class="card">
+            <h3>Curiosidades</h3>
+            <p>Coisas sobre mim e minha jornada.</p>
+            <button onclick="addFavorite('Curiosidades')">Favoritar</button>
+        </div>
+    </div>
+</section>
+
+<!-- ======== GALERIA MULTIMÍDIA ======== -->
+<section id="galeria" class="section">
+    <h2>Galeria Multimídia</h2>
+
+    <div class="galeria">
+        <img src="C:\Users\emyle\OneDrive\Documentos\ebookdaemy\imagens\emy1.jpg" alt="Imagem ilustrativa 1" width="400" height="400">
+        <img src="C:\Users\emyle\OneDrive\Documentos\ebookdaemy\imagens\emy2.jpeg" alt="Imagem ilustrativa 2"  width="400" height="400">
+        <img src="C:\Users\emyle\OneDrive\Documentos\ebookdaemy\imagens\emy3.jpeg" alt="Imagem ilustrativa 3" width="400" height="400">
+    </div> <br>
+
+    <h1>Vídeo</h1> <br>
+    <video controls width="500" height="500">
+        <source src="C:\Users\emyle\OneDrive\Documentos\ebookdaemy\videos\emyle1.mp4" type="video/mp4">
+        Seu navegador não suporta vídeos.
+    </video>
+</section>
+
+<!-- ======== CONTATO ======== -->
+<section id="contato" class="section">
+    <h2>Contato</h2>
+
+    <form id="form-contato">
+        <label>Nome:
+            <input type="text" id="nome" required>
+        </label>
+
+        <label>Email:
+            <input type="email" id="email" required>
+        </label>
+
+        <label>Mensagem:
+            <textarea id="mensagem" required></textarea>
+        </label>
+
+        <button type="submit" class="btn">Enviar</button>
+    </form>
+
+    <p id="status"></p>
+</section>
+
+<script src="emyle.js"></script>
+</body>
+</html>
